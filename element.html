@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+
+        this is container
+
+    </div>
+
+    
+    <script>
+        let div = document.createElement("div");
+        div.innerHTML = "append pokemon"
+        div.setAttribute("class", "created");
+        document.querySelector(".container").append(div);
+        
+        // // or
+
+        let div1 = document.createElement("div");
+        div1.innerHTML = "after"
+        div1.setAttribute("class", "created");
+        document.querySelector(".container").after(div1)
+
+        let div2 = document.createElement("div");
+        div2.innerHTML = "before"
+        div2.setAttribute("class", "created");
+        document.querySelector(".container").before(div2)
+
+        let cont = document.querySelector(".container")
+        cont.insertAdjacentHTML("beforebegin", "<b>beforebegin</b>")
+        cont.insertAdjacentHTML("afterbegin", "<b>afterbegin</b>")
+        cont.insertAdjacentHTML("afterend", "<b>afterend</b>")
+        cont.insertAdjacentHTML("beforeend", "<b>beforeenfd</b>")
+        
+        
+        
+        
+
+
+    </script>
+    
+</body>
+</html>
