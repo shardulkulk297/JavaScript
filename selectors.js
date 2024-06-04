@@ -13,3 +13,5 @@ document.querySelectorAll(".box").forEach(e =>{
 
 //if we just did like document.querySelectorAll(".box").style.backgroundColor = "green" then it will do nothing andf will give error it only returns HTML Selection so we have to use for loop to actually apply stat style to all the elements of that class
 
+
+
