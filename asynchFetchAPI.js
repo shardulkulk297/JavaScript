@@ -47,6 +47,8 @@ async function main() {
 
     console.log(data)
 
+    // the data will not be processed until the the data has been fetched from the server
+
     console.log("process data")
 
 }

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: black;
+            color: greenyellow;
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            margin-top: 300px;
+            padding: 30px;
+            border: 1px solid white;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+
+
+
+    </div>
+
+    <script>
+
+        const addItem = async ((item) => {
+
+            await randomDelay();
+
+            let div = document.createElement("div")
+
+
+            div.innerHTML = item;
+
+
+            document.querySelector(".box").append(div)
+
+
+        })
+
+        const randomDelay = () => {
+
+            return new Promise((resolve, reject) => {
+
+                timeout = 1 + 4 * Math.random()
+
+                setTimeout(() => {
+
+                    resolve()
+
+                }, timeout * 1000)
+
+            })
+
+        }
+
+
+
+
+
+        let text = ["Initializing Hacking", "Reading Your Files",
+            "Password Files Detected", "Sending all passwords and personel Files to server",
+            "Cleaning Up"]
+
+        const appendData = async (() => {
+
+            for(const item of object) {
+
+                await addItem(item)
+
+            }
+
+        })
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
