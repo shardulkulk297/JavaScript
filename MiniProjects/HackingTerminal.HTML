@@ -19,7 +19,7 @@
         }
 
         .box {
-            display: flex;
+            display: block;
             justify-content: center;
             align-content: center;
             margin-top: 300px;
@@ -41,20 +41,23 @@
 
     <script>
 
-        const addItem = async ((item) => {
 
-            await randomDelay();
+        let t = setInterval(()=>{
 
-            let div = document.createElement("div")
+            let last = document.body.getElementsByTagName("div")
+            last = last[last.length-1]
 
+            if(last.innerHTML.endsWith("...") ){
+                last.innerHTML = last.innerHTML.slice(0, last.innerHTML.length - 1)
+            }
+            else{
+                last.innerHTML = last.innerHTML + ".";
 
-            div.innerHTML = item;
+            }
+             
+            
+        }, 500)
 
-
-            document.querySelector(".box").append(div)
-
-
-        })
 
         const randomDelay = () => {
 
@@ -72,23 +75,39 @@
 
         }
 
+         const addItem = async (item) => {
+
+            await randomDelay();
+
+            let div = document.createElement("div")
 
 
+            div.innerHTML = item;
 
 
-        let text = ["Initializing Hacking", "Reading Your Files",
-            "Password Files Detected", "Sending all passwords and personel Files to server",
-            "Cleaning Up"]
+            document.querySelector(".box").append(div)
 
-        const appendData = async (() => {
 
-            for(const item of object) {
+        }
+
+        const main = async () => {
+
+            let text = ["Initializing Hacking", "Reading Your Files",
+                "Password Files Detected", "Sending all passwords and personel Files to server",
+                "Cleaning Up"]
+
+
+            for (const item of text) {
 
                 await addItem(item)
 
             }
+            await randomDelay()
+            clearInterval(t);
 
-        })
+        }
+
+        main()
 
 
 
