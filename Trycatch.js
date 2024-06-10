@@ -10,18 +10,28 @@ if(isNaN(a) || isNaN(b))
 
 let sum = parseInt(a) + parseInt(b)
 
-try {
+function main(){
 
-    console.log("The sum is ", sum*X);
+    try {
+
+        console.log("The sum is ", sum*X);
+        return true
+        
+    } catch (error) {
     
-} catch (error) {
+        console.log("ERROR CATCHED")
+        return false
+        
+    }
 
-    console.log("ERROR CATCHED")
+    console.log("This will not execute but finally will");
     
-}
+    finally{
+        console.log("POKEMON");
+    }
+    
+    
+    
 
-finally{
-    console.log("POKEMON");
 }
-
 
