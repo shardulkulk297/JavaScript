@@ -32,6 +32,7 @@ class Lion extends Animal{ //inheritance
 
     eats() //method overriding
     {
+        super.eats();
         console.log("lion is eating")
     }
 
